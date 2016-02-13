@@ -32,7 +32,7 @@
 
   // Vars
   //
-
+  @import "base/variables";
 
   // Reset
   //
@@ -119,6 +119,6 @@
   ---------------------------------------------------------  */
 
   .new {
-    background-color: red;
+    background-color: $color-offwhite;
     width: 800px;
   }
