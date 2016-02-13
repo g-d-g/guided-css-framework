@@ -1,0 +1,30 @@
+#--------------------------------------------------------
+# Global Variables
+# For use with postcss maps as a project config file.
+#--------------------------------------------------------
+
+#--------------------------------------------------------
+# @units line height, font size
+# Used for setting global project measurments.
+#
+#--------------------------------------------------------
+
+font-size: 10px
+line-height: 1.5
+
+#--------------------------------------------------------
+# @fonts
+#
+#--------------------------------------------------------
+
+font-primary: 'Roboto Slab, Helvetica, "Helvetica Neue", Arial, sans-serif'
+font-secondary: '"Lato", Helvetica, Arial, "Helvetica Neue", sans-serif'
+font-base: '"Helvetica Neue", Helvetica, Arial, sans-serif'
+font-monospace: 'Menlo, Monaco, Consolas, "Courier New", monospace'
+
+#--------------------------------------------------------
+# @breakpoints
+#
+#--------------------------------------------------------
+
+breakpoints: 'xs: 0, sm: 544px, md: 768px, lg: 992px, xl: 1200px, xxl: 1400px'

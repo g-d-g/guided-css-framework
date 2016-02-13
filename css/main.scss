@@ -1,0 +1,124 @@
+/****
+
+  MAIN STYLESHEET for Guided by aalavi09
+
+---------------------------------------------------------
+
+  BUILT WITH SKYLINE, SASS, POSTCSS, HTML5 BOILERPLATE and
+  GOOGLE MATERIAL DESIGN
+
+  See README.md for info and credits
+
+
+  TABLE OF CONTENTS
+  @toc
+
+  - Base ............ foundations, mixins, functions, vars
+  - Elements ........ single elements
+  - Layout .......... layout objects like grids, containers
+  - Components ...... objects created by combining elements
+
+---------------------------------------------------------  */
+
+/***
+
+  @base
+---------------------------------------------------------
+
+  Your CSS begins with some global variables, a reset which
+  is basically Normalize, some mixins, and a print stylesheet.
+
+-----------------------------------------------------  */
+
+  // Vars
+  //
+
+
+  // Reset
+  //
+
+
+  // Mixins
+  //
+
+
+  // Global
+  //
+
+
+  // Development Helpers
+  //
+
+
+
+
+  // Print
+  //
+
+
+
+
+
+
+/***
+
+  @elements
+---------------------------------------------------------
+
+  Global styling of elements.
+
+---------------------------------------------------------  */
+
+
+
+
+
+
+/***
+
+  @layout
+---------------------------------------------------------
+
+  A large portion of CSS is structural layout. You will use
+  these helpers to create the scaffolding that will support
+  the elements and modules that make up your site.
+
+---------------------------------------------------------  */
+
+
+
+
+
+
+/***
+
+  @components
+---------------------------------------------------------
+
+  Reusable objects that are combinations
+  of elements and other modules.
+
+  When you create a new component, make sure the partial is
+  in the modules directory, and you import it below.
+
+  Comment out any partial you don't need for this app.
+
+---------------------------------------------------------  */
+
+
+  // Component Modules
+  //
+
+
+  /***
+
+    Testing done below
+  ---------------------------------------------------------
+
+
+  ---------------------------------------------------------  */
+
+  .new {
+    background-color: red;
+    width: 800px;
+  }

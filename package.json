@@ -1,0 +1,28 @@
+{
+  "name": "Guided",
+  "version": "1.0.0",
+  "description": "Guided",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "aalavi09",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.3.1",
+    "browser-sync": "^2.11.1",
+    "css-mqpacker": "^4.0.0",
+    "gulp": "^3.9.0",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-postcss": "^6.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rucksack": "^0.1.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-sync": "^0.1.4",
+    "postcss-functions": "^2.1.0",
+    "postcss-map": "^0.8.0",
+    "postcss-nested": "^1.0.0",
+    "postcss-scss": "^0.1.3"
+  }
+}
