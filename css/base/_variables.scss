@@ -69,9 +69,13 @@ $warning: map-get($palette-yellow, 500) !default;
 $info: map-get($palette-light-blue, 500) !default;
 $success: map-get($palette-green, 500) !default;
 
-//
-
+// Define project colors
+$font-color--base: map-get($palette-grey, 900);
+$link-color--base: $primary;
+$muted-text-color: map-get($palette-grey, 600);
+$hr-color: map-get($palette-grey, 400) !default;
 $button-color--base: map-get($palette-grey, 400);
+$bg-color--base: $color-offwhite !default;
 
 /* @global spacing unit and font size
 ---------------------------------------------------------

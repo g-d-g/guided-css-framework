@@ -22,12 +22,16 @@
 
 -------------------------------------------------------- */
 
+// Declare desired fonts to be used, else defaults from variables.scss
+// will be used. Uncomment and add values.
+// $font-base: ;
 
 
 /* @base
 --------------------------------------------------------
 
-  This is your basic project font base, set in variables.scss.
+  This is your basic project font base, defaults values
+  in variables.scss.
 
   Usage: use sans regular on a p
   p {

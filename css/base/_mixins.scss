@@ -1,0 +1,82 @@
+/**
+
+  @mixins
+-----------------------------------------------------
+  base/mixins.scss
+--------------------------------------------------------
+
+  Define all project wide mixins.
+
+-----------------------------------------------------  */
+/**
+
+  @breakpoints mixin
+-----------------------------------------------------
+
+  This mixin makes using inline media queries easy.
+  Options include bp-min for min-width, bp-max
+  for max-width, and bp-between for min and max widths.
+
+  You can use your breakpoint vars, or any other value.
+
+  Usage: styles at medium breakpoint
+  .some-element {
+    @include bp-min($breakpoint--md){
+      *** your-styles: go-here; ***
+    }
+  }
+
+  Usage: styles at custom breakpoint
+  .another-element {
+    @include bp-max(83.45em){
+      *** your-styles: go-here; ***
+    }
+  }
+
+-----------------------------------------------------  */
+// Breakpoint At Least, so eg 56em and higher
+@mixin bp-min($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+// Breakpoint up to width, so eg 82em and lower
+@mixin bp-max($width) {
+  @media screen and (max-width: $width - .01) {
+    @content;
+  }
+}
+// Breakpoint Between
+@mixin bp-between($min-width, $max-width) {
+  @media screen and (min-width: $min-width) and (max-width: $max-width) {
+    @content;
+  }
+}
+/*
+
+  @clearfix mixin
+---------------------------------------------------------
+  base/_clearfix.scss
+--------------------------------------------------------
+
+  Use @include clearfix(); in your CSS
+
+  Usage: clearfix mixin
+  .element-to-clearfix {
+    @include cleafix();
+  }
+
+
+--------------------------------------------------------- */
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+  // For IE 6/7 (trigger hasLayout)
+  zoom: 1;
+}

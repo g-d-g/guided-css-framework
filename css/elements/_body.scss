@@ -1,0 +1,25 @@
+/**
+
+  @body
+--------------------------------------------------------
+  elements/_body.scss
+--------------------------------------------------------
+
+  Body should contain the document's default font and
+  background color for the content, if that background
+  color is different than the html.
+
+------------------------------------------------------ */
+
+// Define background color, else it will default to value
+// set in variables.scss.
+$bg-color--base: #fff;
+
+body {
+  @extend %roboto--regular;
+
+  font-size: $font-size--base;
+
+  color: $font-color--base;
+  background-color: $bg-color--base;
+}
