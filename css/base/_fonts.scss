@@ -1,0 +1,95 @@
+/**
+
+  @fonts
+--------------------------------------------------------
+  base/_fonts.scss
+--------------------------------------------------------
+
+  Define the fonts used in this app and declare silent
+  classes to be used in your CSS.
+
+  If you are using a webfont that you're hosting, add
+  the @embed-font() mixin from base/_mixin-font-face-importer.scs
+  before you declare your fonts.
+
+  Usage: Create a font-family named "interstate-light" using a font at
+  /fonts/interstate_light-webfont.woff (and other extensions)
+  @include embed-font("interstate-light", "/fonts/interstate_light-webfont");
+
+  If you are using Google Fonts, check _variables for import url.
+  Eg;
+  @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,100,700,400italic,100italic,300italic,700italic);
+
+-------------------------------------------------------- */
+
+
+
+/* @base
+--------------------------------------------------------
+
+  This is your basic project font base, set in variables.scss.
+
+  Usage: use sans regular on a p
+  p {
+    @extend %base--regular;
+  }
+
+------------------------------------------------------ */
+
+%base--light {
+  font-family: $font-base;
+  font-weight: 300;
+  font-style: normal;
+}
+
+%base--regular {
+  font-family: $font-base;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%base--semi-bold {
+  font-family: $font-base;
+  font-weight: 600;
+  font-style: normal;
+}
+
+%base--bold {
+  font-family: $font-base;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+/* @roboto
+--------------------------------------------------------
+Usage: use roboto regular on a p
+p {
+  @extend %roboto--regular;
+}
+
+-------------------------------------------------------- */
+
+%roboto--light {
+  font-family: $font-primary;
+  font-weight: 300;
+  font-style: normal;
+}
+
+%roboto--regular {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-style: normal;
+}
+
+%roboto--italic {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-style: italic;
+}
+
+%roboto--semi-bold {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-style: italic;
+}

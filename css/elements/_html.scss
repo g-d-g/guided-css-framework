@@ -1,0 +1,20 @@
+/**
+
+   @html
+--------------------------------------------------------
+  elements/_html.scss
+--------------------------------------------------------
+
+  HTML should contain the site's default values such as
+  font-size
+
+------------------------------------------------------ */
+
+html {
+  // font-size set to 10px so that .1rem = 1px
+  font-size: 10px;
+  // line-height
+  line-height: $unit;
+
+  @extend %roboto--regular;
+}

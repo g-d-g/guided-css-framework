@@ -19,7 +19,6 @@
   - Components ...... objects created by combining elements
 
 ---------------------------------------------------------  */
-
 /***
 
   @base
@@ -29,37 +28,29 @@
   is basically Normalize, some mixins, and a print stylesheet.
 
 -----------------------------------------------------  */
+// Vars
+//
+@import "base/variables";
 
-  // Vars
-  //
-  @import "base/variables";
-
-  // Reset
-  //
-@import "base/reset";
-
-  // Mixins
-  //
-
-
-  // Global
-  //
-
-
-  // Development Helpers
-  //
+// Utils
+//
 @import "base/utils";
 
+// Reset
+//
+@import "base/reset";
 
+// Mixins
+//
+// Global
+//
+@import "base/fonts";
 
-  // Print
-  //
+// Development Helpers
+//
 
-
-
-
-
-
+// Print
+//
 /***
 
   @elements
@@ -69,10 +60,7 @@
 
 ---------------------------------------------------------  */
 
-
-
-
-
+@import "elements/html";
 
 /***
 
@@ -84,12 +72,6 @@
   the elements and modules that make up your site.
 
 ---------------------------------------------------------  */
-
-
-
-
-
-
 /***
 
   @components
@@ -104,21 +86,16 @@
   Comment out any partial you don't need for this app.
 
 ---------------------------------------------------------  */
-
-
-  // Component Modules
-  //
-
-
-  /***
+// Component Modules
+//
+/***
 
     Testing done below
   ---------------------------------------------------------
 
 
   ---------------------------------------------------------  */
-
-  .new {
-    background-color: $color-offwhite;
-    width: 800px;
-  }
+.new {
+  background-color: $color-offwhite;
+  width: 800px;
+}
