@@ -68,3 +68,57 @@ $error: map-get($palette-red, 500) !default;
 $warning: map-get($palette-yellow, 500) !default;
 $info: map-get($palette-light-blue, 500) !default;
 $success: map-get($palette-green, 500) !default;
+
+//
+
+$button-color--base: map-get($palette-grey, 400);
+
+/* @global spacing unit and font size
+---------------------------------------------------------
+
+  Define an px/em value for $unit.  $unit is a helpful little
+  variable that serves to keep your spacing consistent.
+
+  Most often, 1 $unit is equal to your baseline height.  So
+  if your baseline height is 1.125 (which is 18px), that's
+  the value of 1 $unit.
+
+  Unit is line-height from variables.yml
+  Import via 'map(variables, line-height)'.
+
+  Base font-size set to 1.6rem to equal 16px because root is set
+  to 10px so that 1px = .1rem.
+
+--------------------------------------------------------- */
+$unit: 1.5;
+$font-size--base: 1.6rem;
+
+/* @breakpoints
+---------------------------------------------------------
+
+  Define global breakpoints as xs, sm, md, lg, xl
+
+--------------------------------------------------------- */
+
+// Define breakpoints map to help with some other functions
+// Include into sass maps from variables.yml using 'map(variables, breakpoints)'
+// Then use sass map calls, eg map-get($breakpoints, sm)
+// and mixins.
+$breakpoints: ( xs: 0, sm: 20em, md: 30em, lg: 48em, xl: 62em );
+
+// Define individual variables
+//
+// Extra Small: Small mobile
+$breakpoint--xs: map-get($breakpoints, xs);
+
+// Small: Larger mobile
+$breakpoint--sm: map-get($breakpoints, sm);
+
+// Medium: Tablet
+$breakpoint--md: map-get($breakpoints, md);
+
+// Large: Landscape tablet, beginning desk size
+$breakpoint--lg: map-get($breakpoints, lg);
+
+// Extra Large: Large Desk size
+$breakpoint--xl: map-get($breakpoints, xl);

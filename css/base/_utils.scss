@@ -1,0 +1,15 @@
+/**
+
+  @Util
+--------------------------------------------------------
+  base/_utils.scss
+--------------------------------------------------------
+
+-------------------------------------------------------- */
+
+// Em convertor function: takes in a T-arget(in px) value and
+// C-ontext(default to base font size of 16)
+
+@function em($target, $context: $font-size--base*10) {
+  @return #{$target/$context}em;
+}

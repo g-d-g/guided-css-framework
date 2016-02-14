@@ -1,0 +1,137 @@
+/**
+
+  @reset
+---------------------------------------------------------
+  base/_reset.scss
+--------------------------------------------------------
+
+  Based on http://jaydenseric.com/blog/forget-normalize-or-resets-lay-your-own-css-foundation
+
+--------------------------------------------------------- */
+
+// Apply the new box model definition & reset to no margin on anything
+*,
+  *:before,
+  *:after{
+ -moz-box-sizing: border-box;
+ box-sizing: border-box;
+ padding: 0;
+ margin: 0;
+}
+
+/*prevent certain mobile browsers from automatically zooming fonts */
+html {
+ -ms-text-size-adjust: 100%;
+ -webkit-text-size-adjust: 100%;
+ -webkit-font-smoothing: antialiased;
+ -moz-osx-font-smoothing: grayscale;
+ -webkit-tap-highlight-color: transparent;
+ }
+
+//
+
+iframe {
+  border: 0;
+}
+main {
+  display: block;
+}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+li {
+  display: block;
+}
+dl {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+dd {
+  margin-left: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: inherit;
+}
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+sup {
+  position: relative;
+  top: -.5em;
+  vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+}
+/* Set to bold so that browser doesnt default to 'bolder'*/
+strong {
+  font-weight: bold;
+}
+figure {
+  margin: 0;
+}
+img {
+  border: 0;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+/* remove link decoration */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-align: inherit;
+  text-transform: inherit;
+  font: inherit;
+  -webkit-font-smoothing: inherit;
+  letter-spacing: inherit;
+  /* default bg color */
+  background: $button-color--base;
+  cursor: pointer;
+  overflow: visible;
+}
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+:focus {
+  outline: 0;
+}
+
+// Apply display block to new HTML5 elements
+// article,
+// aside,
+// details,
+// figcaption,
+// figure,
+// footer,
+// header,
+// hgroup,
+// main,
+// nav,
+// section,
+// summary,
+// audio,
+// canvas,
+// video {
+//     display: block;
+// }
