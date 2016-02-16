@@ -65,6 +65,8 @@
 
 @import "elements/body";
 
+@import "elements/images";
+
 /***
 
   @layout
@@ -91,6 +93,8 @@
 ---------------------------------------------------------  */
 // Component Modules
 //
+
+@import "components/hero";
 /***
 
     Testing done below

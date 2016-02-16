@@ -1,0 +1,57 @@
+/**
+
+  @hero
+--------------------------------------------------------
+  components/_hero.scss
+--------------------------------------------------------
+
+  Just your everyday, normal hero.  Contains a div that has
+  the media (video or image) in the background, and a div
+  for the main content.
+
+------------------------------------------------------ */
+$bg-color--base: map-get($palette-grey, 300);
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 3em;
+}
+
+.hero--media {
+  position: relative;
+  z-index: 200;
+}
+
+.hero--content {
+  position: absolute;
+  z-index: 210;
+  width: 100%;
+  top: 50%;
+  text-align: center;
+  color: $color-white;
+  color: $bg-color--base;
+  font-size: .75em;
+
+  button {
+    margin-bottom: 4em;
+  }
+
+  h1,
+  h2,
+  h3 {
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  p {
+    margin-top: .5em;
+    margin-bottom: .75em;
+  }
+  @include bp-min($breakpoint--sm){
+  font-size: 1em;
+  }
+  @include bp-min($breakpoint--lg){
+  font-size: 1.25em;
+  }
+}
