@@ -1,0 +1,26 @@
+/**
+
+  @images
+---------------------------------------------------------
+  elements/_images.scss
+--------------------------------------------------------
+
+  Base styling for images
+
+--------------------------------------------------------- */
+
+
+
+/* @images
+--------------------------------------------------------
+
+  Base Image Style is 100% width by default
+
+------------------------------------------------------ */
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;   // Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+}

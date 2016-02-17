@@ -8,6 +8,7 @@
   Define all project wide mixins.
 
 -----------------------------------------------------  */
+
 /**
 
   @breakpoints mixin
@@ -34,30 +35,32 @@
   }
 
 -----------------------------------------------------  */
+
 // Breakpoint At Least, so eg 56em and higher
 @mixin bp-min($width) {
   @media screen and (min-width: $width) {
     @content;
   }
 }
+
 // Breakpoint up to width, so eg 82em and lower
 @mixin bp-max($width) {
   @media screen and (max-width: $width - .01) {
     @content;
   }
 }
+
 // Breakpoint Between
 @mixin bp-between($min-width, $max-width) {
   @media screen and (min-width: $min-width) and (max-width: $max-width) {
     @content;
   }
 }
+
 /*
 
   @clearfix mixin
 ---------------------------------------------------------
-  base/_clearfix.scss
---------------------------------------------------------
 
   Use @include clearfix(); in your CSS
 
@@ -66,7 +69,6 @@
     @include cleafix();
   }
 
-
 --------------------------------------------------------- */
 @mixin clearfix() {
   &:before,
@@ -74,9 +76,69 @@
     content: " ";
     display: table;
   }
+
   &:after {
     clear: both;
   }
+
   // For IE 6/7 (trigger hasLayout)
   zoom: 1;
+}
+
+/*
+
+  @grid generator mixin
+---------------------------------------------------------
+
+  Use @include generate-columns();
+
+  Default column-count and gutter values in variables.scss
+
+--------------------------------------------------------- */
+
+// column generation
+@mixin generate-columns($columns: $column-count, $gutter: $gutter-width) {
+  // Placeholder values
+  %grid-column {
+    position: relative;
+    float: left;
+    // Prevent columns from collapsing when empty
+    min-height: 1px;
+    // Inner gutter via padding, to the right only
+    padding-right: $gutter * 1em;
+  }
+  // create colomns
+  @for $col from 1 to $columns {
+    .col-#{$col} {
+      width: percentage($col / $columns);
+      //Apply column properties from placeholder
+      @extend %grid-column;
+    }
+  }
+}
+
+/**
+
+  @container mixin
+---------------------------------------------------------
+
+  Use @include generate-container()
+
+  Supply a desired length for container(if less than 48ems widths set to 95% of
+  viewport), gutter value for both ends. Values in variables.scss.
+
+--------------------------------------------------------- */
+
+// Generate container
+@mixin generate-container($breakpoint, $gutter: $gutter-width) {
+  //margins on left and right set to auto for centering
+  margin: 0 auto;
+  // Increase left+right $gutter values on smaller breakpoints
+  @if $breakpoint < map-get($breakpoints, lg) {
+      max-width: 95%;
+      padding: 0 $gutter * 1em;}
+      @else {
+        max-width: $breakpoint;
+        padding: 0 ($gutter/ 2 * 1em);
+      }
 }

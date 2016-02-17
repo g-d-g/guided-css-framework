@@ -1,0 +1,28 @@
+/**
+
+  @grids
+---------------------------------------------------------
+  layout/_grids.scss
+--------------------------------------------------------
+
+  Mixin found under @grid in _mixins.scss.
+
+------------------------------------------------------ */
+
+@include generate-columns();
+
+// row
+.row {
+  margin: 0 $gutter-width;
+  // remove padding on right for last column in row
+  & [class*='col-']:last-of-type {
+    padding-right: 0;
+  }
+}
+
+// clear content after row to avoid collapse
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
