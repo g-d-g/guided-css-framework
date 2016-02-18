@@ -142,3 +142,22 @@
         padding: 0 ($gutter/ 2 * 1em);
       }
 }
+
+/**
+
+  @font size mixin
+---------------------------------------------------------
+
+  Use @include font-sizes()
+
+  Mixin to set heading tag font sizes
+
+--------------------------------------------------------- */
+@mixin font-sizes($map){
+  @each $ele, $size in $map {
+    #{$ele} {
+      font-size: $size;
+    }
+  }
+
+}

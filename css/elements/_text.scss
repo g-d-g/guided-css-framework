@@ -1,0 +1,95 @@
+/**
+
+  @text
+--------------------------------------------------------
+  elements/_text.scss
+--------------------------------------------------------
+
+  Some basic styles to paragraphs and
+  inline styles
+
+-----------------------------------------------------  */
+
+p {
+  //return padding using em function
+  padding-bottom: $unit * 1em;
+}
+a,
+a:visited {
+	color: $link-color--base;
+
+	&:hover {
+		color: $font-color--base;
+	}
+}
+
+hr {
+	border: 0;
+	background-color: $hr-color;
+	height: 1px;
+	margin: ($unit * 1em) 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: ($unit * 1em) 0 .5em;
+	line-height: 1.2;
+}
+
+h1, h2 {
+	margin: ($unit * 1em)/2 0 .5em;
+}
+
+h5, h6 {
+	line-height: 1.5;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+//mixin for heading tag font sizes
+@include font-sizes($heading-font-sizes);
+
+small, .font_small {font-size: 0.707em;}
+
+ul, ol {
+	margin: 0 0 ($unit * 1em) ($unit * 1em);
+}
+
+blockquote {
+	color: $muted-text-color;
+	font-style: italic;
+	margin-left: ($unit * 1em);
+
+	footer {
+		//use small tag settings
+		font-size: small;
+		font-style: normal;
+	}
+}
+
+// Headline style for heading placeholders
+
+%headline--primary{
+    font-weight: normal;
+    font-size: 3.998em;
+    margin: ($unit * 1em)/2 0 .5em;
+}
+
+%headline--secondary{
+    font-weight: 300;
+    font-size: em(36);
+    color: map-get($palette-grey, 400);
+    margin: ($unit * 1em)/2 0 .5em;
+    letter-spacing: 1px;
+}
+
+// Headlines
+.headline {
+
+  &-primary{
+    @extend %headline--primary;
+  }
+
+  &-secondary{
+    @extend %headline--secondary;
+  }
+}

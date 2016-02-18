@@ -97,6 +97,16 @@ $bg-color--base: $color-offwhite !default;
 $unit: 1.5;
 $font-size--base: 1.6rem;
 
+// heading sizes
+$heading-font-sizes: (
+h1: 3.998em,
+h2: 2.827em,
+h3: 1.999em,
+h4: 1.414em,
+h5: 1em,
+h6: 0.707em
+);
+
 /* @breakpoints
 ---------------------------------------------------------
 
