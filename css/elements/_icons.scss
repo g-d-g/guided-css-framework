@@ -10,8 +10,6 @@
 
 --------------------------------------------------------- */
 
-
-
 // @font-face {
 //   font-family: 'Material Icons';
 //   font-style: normal;
@@ -21,16 +19,16 @@
 // }
 
 // General icon settings
-.icon-square,
-.icon-rounded,
-.icon-huge,
-.icon-circle,
-.icon-large
+.icon--square,
+.icon--rounded,
+.icon--huge,
+.icon--circle,
+.icon--large
  {
 	font-family: 'Material Icons';
 	font-weight: normal;
 	font-style: normal;
-	font-size: 24px;  /* Preferred icon size */
+	font-size: $icon-font-size;  // Preferred icon size
   // icon border and size
   height: 3em;
   padding: .25em;
@@ -58,11 +56,11 @@
   }
 }
 
-.icon-circle {
+.icon--circle {
   border-radius: 100%;
 }
 
-.icon-rounded {
+.icon--rounded {
   border-radius: 4px;
 }
 
@@ -71,10 +69,10 @@
   font-size: 48px;
 }
 
-.icon-huge {
+.icon--huge {
   font-size: 72px;
 }
 
-.icon-small {
+.icon--small {
   font-size: 16px;
 }

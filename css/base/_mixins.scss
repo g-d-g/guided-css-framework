@@ -171,21 +171,14 @@
   @responsive font size mixin
 ---------------------------------------------------------
 
-  Use @include font-sizes()
-
-  Usage: Gradually increase the font size of the html
-html {
- @include gradual-queries(20em, 80%, 70em, 100%, 10em)
-}
+  ##### INCOMPLETE #####
 
 --------------------------------------------------------- */
-
-@mixin responsive-size($fs-map){
+@mixin responsive-size($fs-map) {
   @each $bp, $fs in $fs-map {
     @if $bp == 0 {
       font-size: $fs;
-    }
-    @else {
+    } @else {
       @media screen and (min-width: $bp) {
         font-size: $fs;
       }
@@ -201,48 +194,135 @@ html {
  sample usage : element-name { @include buttons($text-color, 6px); }
 
 --------------------------------------------------------- */
+@mixin buttons($color: inherit, $border: $border-radius--base) {
+  color: $color;
 
+  //background-color: $background;
+  border: 0;
+  border-radius: $border;
+  cursor: pointer;
 
-@mixin buttons($color: inherit, $border: $border-radius--base){
+  // keep consistancy with forms
+  line-height: 1.125rem;
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+
+  // to give padding
+  display: inline-block;
+  padding: .75em 1.5em;
+  box-sizing: border-box;
+
+  &:hover {
     color: $color;
-    //background-color: $background;
 
-    border: 0;
-    border-radius: $border;
+    //darken bg on hover
+    box-shadow: inset 0 0 0 20rem rgba(0, 0, 0, .0625);
+  }
 
-    cursor: pointer;
+  &:active {
+    // on click
+    color: $color;
+    box-shadow: inset 0 0 0 20rem rgba(0, 0, 0, .125);
+  }
 
-    // keep consistancy with forms
-    line-height: 1.125rem;
-    font-family: inherit;
-    font-size: inherit;
-    text-decoration: none;
+  &:visited {
+    color: $color;
+  }
 
-    // to give padding
-    display: inline-block;
-    padding: .75em 1.5em;
+  &:focus {
+    outline: none;
+    border-color: rgba(0, 0, 0, .125);
+  }
+}
 
-    box-sizing: border-box;
-          &:hover {
+/**
 
-            color: $color;
+  @border mixin
+---------------------------------------------------------
 
-            //darken bg on hover
-            box-shadow: inset 0 0 0 20rem rgba(0,0,0,.0625);
-          }
+  Set border
+  Usage; @include border-all()
 
-          &:active {
-            // on click
-            color: $color;
-            box-shadow: inset 0 0 0 20rem rgba(0,0,0,.125);
-          }
-          &:visited{
-            color: $color;
-          }
+--------------------------------------------------------- */
+@mixin border-all($thickness: 1px) {
+  border: $thickness solid;
+}
 
-          &:focus {
-            outline: none;
-            border-color: rgba(0,0,0,.125);
-          }
+/**
 
+  @padding mixins
+---------------------------------------------------------
+
+  Usage example: @include padding-left-righ(2rem)
+
+--------------------------------------------------------- */
+@mixin padding-left-right($val: 0.5rem) {
+  padding: 0 $val;
+}
+
+@mixin padding-top-bottom($val: 0.5rem) {
+  padding: $val 0;
+}
+
+@mixin padding-all($val: 0.5rem) {
+  padding: $val;
+}
+
+/**
+
+  @margin mixins
+---------------------------------------------------------
+
+  Usage example: @include margin-left-righ(1rem)
+
+--------------------------------------------------------- */
+@mixin margin-left-right($val: 0.5rem) {
+  margin: 0 $val;
+}
+
+@mixin margin-top-bottom($val: 0.5rem) {
+  margin: $val 0;
+}
+
+@mixin margin-all($val: 0.5rem) {
+  margin: $val;
+}
+
+/**
+
+  @shadow mixin
+---------------------------------------------------------
+
+  Usage; @include box-shadow(0px 4px 5px #666, 2px 6px 10px #999);
+  will generate for; offset-x | offset-y | blur-radius | color
+
+--------------------------------------------------------- */
+@mixin box-shadow($shadows...) {
+  box-shadow: $shadows;
+}
+
+/**
+
+  @color generate
+---------------------------------------------------------
+
+  Generates color classes for background, border and text.
+
+  Supply a color value and desired name;
+  @include generate-color(map-get($palette-red, 200), "light-red");
+
+--------------------------------------------------------- */
+@mixin generate-color($col, $name) {
+  .#{$name} {
+    color: $col;
+  }
+
+  .bg-#{$name} {
+    background-color: $col;
+  }
+
+  .border-#{$name} {
+    border-color: $col;
+  }
 }

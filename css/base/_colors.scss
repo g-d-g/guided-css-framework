@@ -1,0 +1,72 @@
+/**
+
+  @Colors
+--------------------------------------------------------
+  base/_colors.scss
+--------------------------------------------------------
+
+  Generate border, background and foreground color classes.
+
+-------------------------------------------------------- */
+
+@include generate-color($color-black, "black");
+
+@include generate-color($color-white, "white");
+
+@include generate-color($color-grey, "grey");
+
+@include generate-color(map-get($palette-grey, 300), "light-grey");
+
+@include generate-color(map-get($palette-grey, 700), "dark-grey");
+
+@include generate-color($color-brown, "brown");
+
+@include generate-color(map-get($palette-cyan, 500), "aqua");
+
+@include generate-color(map-get($palette-blue, 500), "blue");
+
+@include generate-color(map-get($palette-light-blue, 500), "light-blue");
+
+@include generate-color(map-get($palette-teal, 500), "teal");
+
+@include generate-color(map-get($palette-green, 500), "green");
+
+@include generate-color(map-get($palette-light-green, 500), "light-green");
+
+@include generate-color(map-get($palette-indigo, 500), "navy");
+
+@include generate-color(map-get($palette-light-green, 800), "olive");
+
+@include generate-color(map-get($palette-green, 900), "dark-green");
+
+@include generate-color(map-get($palette-lime, 500), "lime");
+
+@include generate-color(map-get($palette-yellow, 500), "yellow");
+
+@include generate-color(map-get($palette-orange, 500), "orange");
+
+@include generate-color(map-get($palette-red, 500), "red");
+
+@include generate-color(map-get($palette-purple, 500), "purple");
+
+@include generate-color(map-get($palette-orange, 300), "light-orange");
+
+@include generate-color(map-get($palette-red, 300), "light-red");
+
+@include generate-color(map-get($palette-purple, 900), "dark-purple");
+
+@include generate-color(map-get($palette-pink, 900), "maroon");
+
+@include generate-color(map-get($palette-purple, A400), "fuchsia");
+
+// opacity based classes, via basscss
+.bg-darken-1 { background-color: rgba(0,0,0,.0625) }
+.bg-darken-2 { background-color: rgba(0,0,0,.125) }
+.bg-darken-3 { background-color: rgba(0,0,0,.25) }
+.bg-darken-4 { background-color: rgba(0,0,0,.5) }
+
+.border-darken-1 { border-color: rgba(0,0,0,.0625) }
+.border-darken-2 { border-color: rgba(0,0,0,.125) }
+.border-darken-3 { border-color: rgba(0,0,0,.25) }
+.border-darken-4 { border-color: rgba(0,0,0,.5) }
+.muted { opacity: .5 }

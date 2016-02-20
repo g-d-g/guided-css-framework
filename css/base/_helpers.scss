@@ -1,0 +1,49 @@
+/**
+
+  @helpers
+--------------------------------------------------------
+  base/_helpers.scss
+--------------------------------------------------------
+
+  Group of classes to help with layout and general styling.
+  Eg, borders, margins and shadows.
+
+  Mixins listed in _mixins.scss
+
+-------------------------------------------------------- */
+
+// 1px thick solid border
+.border {
+    @include border-all();
+}
+
+// 3px thick solid border
+.border-thick {
+    @include border-all(3px);
+}
+
+.pad {
+    @include padding-left-right(0.5em);
+  }
+
+.pad--extra {
+    @include padding-left-right(1em);
+  }
+
+.mar {
+    @include margin-left-right();
+}
+
+.mar-top {
+    margin-top: 0.5em;
+}
+
+.mar-bottom {
+    margin-bottom: 0.5em;
+}
+
+//Shadows
+/* offset-x | offset-y | blur-radius | color */
+.shadow {
+  @include box-shadow(0px 4px 5px #666);
+}
