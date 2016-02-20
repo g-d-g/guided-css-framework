@@ -102,15 +102,19 @@
   %grid-column {
     position: relative;
     float: left;
+
     // Prevent columns from collapsing when empty
     min-height: 1px;
+
     // Inner gutter via padding, to the right only
     padding-right: $gutter * 1em;
   }
+
   // create colomns
   @for $col from 1 to $columns {
     .col-#{$col} {
       width: percentage($col / $columns);
+
       //Apply column properties from placeholder
       @extend %grid-column;
     }
@@ -133,14 +137,15 @@
 @mixin generate-container($breakpoint, $gutter: $gutter-width) {
   //margins on left and right set to auto for centering
   margin: 0 auto;
+
   // Increase left+right $gutter values on smaller breakpoints
   @if $breakpoint < map-get($breakpoints, lg) {
-      max-width: 95%;
-      padding: 0 $gutter * 1em;}
-      @else {
-        max-width: $breakpoint;
-        padding: 0 ($gutter/ 2 * 1em);
-      }
+    max-width: 95%;
+    padding: 0 $gutter * 1em;
+  } @else {
+    max-width: $breakpoint;
+    padding: 0 ($gutter/ 2 * 1em);
+  }
 }
 
 /**
@@ -153,11 +158,91 @@
   Mixin to set heading tag font sizes
 
 --------------------------------------------------------- */
-@mixin font-sizes($map){
+@mixin font-sizes($map) {
   @each $ele, $size in $map {
     #{$ele} {
       font-size: $size;
     }
   }
+}
+
+/**
+
+  @responsive font size mixin
+---------------------------------------------------------
+
+  Use @include font-sizes()
+
+  Usage: Gradually increase the font size of the html
+html {
+ @include gradual-queries(20em, 80%, 70em, 100%, 10em)
+}
+
+--------------------------------------------------------- */
+
+@mixin responsive-size($fs-map){
+  @each $bp, $fs in $fs-map {
+    @if $bp == 0 {
+      font-size: $fs;
+    }
+    @else {
+      @media screen and (min-width: $bp) {
+        font-size: $fs;
+      }
+    }
+  }
+}
+
+/**
+
+  @Buttons mixin
+---------------------------------------------------------
+
+ sample usage : element-name { @include buttons($text-color, 6px); }
+
+--------------------------------------------------------- */
+
+
+@mixin buttons($color: inherit, $border: $border-radius--base){
+    color: $color;
+    //background-color: $background;
+
+    border: 0;
+    border-radius: $border;
+
+    cursor: pointer;
+
+    // keep consistancy with forms
+    line-height: 1.125rem;
+    font-family: inherit;
+    font-size: inherit;
+    text-decoration: none;
+
+    // to give padding
+    display: inline-block;
+    padding: .75em 1.5em;
+
+    box-sizing: border-box;
+          &:hover {
+
+            color: $color;
+
+            //darken bg on hover
+            box-shadow: inset 0 0 0 20rem rgba(0,0,0,.0625);
+          }
+
+          &:active {
+            // on click
+            color: $color;
+            box-shadow: inset 0 0 0 20rem rgba(0,0,0,.125);
+          }
+          &:visited{
+            color: $color;
+          }
+
+          &:focus {
+            outline: none;
+            border-color: rgba(0,0,0,.125);
+          }
 
 }

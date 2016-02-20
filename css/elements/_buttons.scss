@@ -1,0 +1,49 @@
+/**
+
+  @Buttons styles
+--------------------------------------------------------
+  elements/buttons.scss
+--------------------------------------------------------
+
+  Check buttons function in mixins, needs to be generated
+  for classes below to work.
+
+------------------------------------------------------ */
+// Button styles
+// Check buttons function in mixins, needs to be generated for classes below to work.
+button,
+.button,
+a.button {
+@include buttons();
+}
+
+.button--small {
+	@extend .button;
+
+	font-size: .75em;
+}
+
+.button--large {
+	@extend .button;
+
+	font-size: 2em;
+	font-weight: bold;
+}
+
+
+//
+
+.button--primary {
+	//import .button class
+	@extend .button;
+
+	background-color: $primary;
+
+	color: $color-white;
+
+	&:hover {
+
+	color: $color-white;
+	}
+
+}

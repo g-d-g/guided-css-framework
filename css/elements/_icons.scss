@@ -1,0 +1,80 @@
+/**
+
+  @icons
+---------------------------------------------------------
+  elements/_icons.scss
+--------------------------------------------------------
+
+ Using google's 'Material Icons', located in fonts directory
+ http://google.github.io/material-design-icons/
+
+--------------------------------------------------------- */
+
+
+
+// @font-face {
+//   font-family: 'Material Icons';
+//   font-style: normal;
+//   font-weight: 400;
+//   src: url('../fonts/MaterialIcons-Regular.eot');
+//   src: url('../fonts/MaterialIcons-Regular.woff');
+// }
+
+// General icon settings
+.icon-square,
+.icon-rounded,
+.icon-huge,
+.icon-circle,
+.icon-large
+ {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;  /* Preferred icon size */
+  // icon border and size
+  height: 3em;
+  padding: .25em;
+  margin-bottom: $unit * 1em;
+  width: 3em;
+  text-align: center;
+
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+
+  i {
+    line-height: 2.5em;
+  }
+}
+
+.icon-circle {
+  border-radius: 100%;
+}
+
+.icon-rounded {
+  border-radius: 4px;
+}
+
+.icon-large {
+	// ..or 150%
+  font-size: 48px;
+}
+
+.icon-huge {
+  font-size: 72px;
+}
+
+.icon-small {
+  font-size: 16px;
+}

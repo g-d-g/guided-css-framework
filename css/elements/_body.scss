@@ -17,9 +17,18 @@ $bg-color--base: #fff;
 
 body {
   @extend %roboto--regular;
-
   font-size: $font-size--base;
 
   color: $font-color--base;
   background-color: $bg-color--base;
+
+  // @include bp-min($breakpoint--xs){
+  //   font-size: 1.2em;
+  // }
+  // @include bp-min($breakpoint--sm){
+  //   font-size: 1.4em;
+  // }
+  // @include bp-min($breakpoint--lg){
+  //   font-size: 1.6em;
+  // }
 }
