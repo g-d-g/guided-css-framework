@@ -13,11 +13,13 @@
 
 // row
 .row {
-  margin: 0 $gutter-width;
+  margin: 0 $gutter-width*1em;
 
-  // remove padding on right for last column in row
+  // remove padding on right for LAST column in row
+  // float to the right
   & [class*='col-']:last-of-type {
     padding-right: 0;
+    float: right;
   }
 }
 
@@ -28,9 +30,10 @@
   clear: both;
 }
 
-// Responsiveness below 34em, stack columns.
+// Responsiveness below 34em, stack columns, remove padding.
 @include bp-max($breakpoint--md) {
   [class^="col-"] {
     width: 100%;
+    padding: 0;
   }
 }
