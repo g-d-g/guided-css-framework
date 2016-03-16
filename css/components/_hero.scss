@@ -5,16 +5,12 @@
   components/_hero.scss
 --------------------------------------------------------
 
-  Just your everyday, normal hero.  Contains a div that has
-  the media (video or image) in the background, and a div
-  for the main content.
 
 ------------------------------------------------------ */
 $bg-color--base: map-get($palette-grey, 300);
 
 .hero {
   position: relative;
-  overflow: hidden;
   margin-bottom: 3em;
 }
 

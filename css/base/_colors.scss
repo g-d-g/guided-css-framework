@@ -25,6 +25,8 @@
 
 @include generate-color(map-get($palette-blue, 500), "blue");
 
+@include generate-color(map-get($palette-blue, 800), "dark-blue");
+
 @include generate-color(map-get($palette-light-blue, 500), "light-blue");
 
 @include generate-color(map-get($palette-teal, 500), "teal");

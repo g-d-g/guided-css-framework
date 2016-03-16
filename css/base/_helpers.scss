@@ -12,6 +12,11 @@
 
 -------------------------------------------------------- */
 
+//
+.clearfix {
+  @include clearfix();
+}
+
 // 1px thick solid border
 .border {
     @include border-all();

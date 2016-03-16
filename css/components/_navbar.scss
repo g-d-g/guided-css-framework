@@ -1,0 +1,87 @@
+/**
+
+  @navbar
+--------------------------------------------------------
+  components/_navbar.scss
+--------------------------------------------------------
+
+  Navigation bar for use site wise.
+
+
+------------------------------------------------------ */
+
+.brand {
+  margin: 0 auto $unit#{em};
+  text-decoration: none;
+  display: block;
+  text-align: center;
+
+  @include bp-min($breakpoint--md) {
+  margin: 0;
+  float: left;
+  text-align: left;
+  }
+}
+
+.brand--logo {
+  height: 4.5em;
+  width: 4.5em;
+
+  @include bp-min($breakpoint--md) {
+  float: left;
+  margin-right: 1.5em;
+  }
+}
+
+.brand--text {
+  font-size: 1.5em;
+  white-space: nowrap;
+  line-height: 3em;
+  margin: 0;
+}
+
+.nav-bar-items {
+  text-align: center;
+
+  @include bp-min($breakpoint--md) {
+  float: right;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline;
+      padding: 0 0.5em;
+      height: 4.5em;
+      line-height: 4.5em;
+      padding: 0 .5em;
+      margin-left: .75em;
+      -moz-transition: background-color .3s;
+    }
+
+    li:first-child {
+      margin-left: 0;
+    }
+
+    a {
+      text-decoration: none;
+      display: inline-block;
+    }
+
+    li:hover,
+    li.active {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+}
+
+.nav-bar {
+  text-align: center;
+
+  @include bp-max($breakpoint--md) {
+    //display: none;
+  }
+}
