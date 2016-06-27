@@ -9,14 +9,12 @@
 
 
 ------------------------------------------------------ */
-
 .brand {
   margin: 0 auto $unit#{em};
   text-decoration: none;
   display: block;
   text-align: center;
-
-  @include bp-min($breakpoint--md) {
+  @include bp-min($breakpoint--md){
   margin: 0;
   float: left;
   text-align: left;
@@ -26,8 +24,7 @@
 .brand--logo {
   height: 4.5em;
   width: 4.5em;
-
-  @include bp-min($breakpoint--md) {
+  @include bp-min($breakpoint--md){
   float: left;
   margin-right: 1.5em;
   }
@@ -42,8 +39,7 @@
 
 .nav-bar-items {
   text-align: center;
-
-  @include bp-min($breakpoint--md) {
+  @include bp-min($breakpoint--md){
   float: right;
   }
 
@@ -54,34 +50,34 @@
 
     li {
       display: inline;
-      padding: 0 0.5em;
-      height: 4.5em;
-      line-height: 4.5em;
-      padding: 0 .5em;
-      margin-left: .75em;
-      -moz-transition: background-color .3s;
+
+      a {
+        text-decoration: none;
+        display: inline-block;
+        padding: 0 1em;
+        height: 4.5em;
+        line-height: 4.5em;
+        margin-left: 0;
+        -moz-transition: background-color .3s;
+      }
+
+      a:hover,
+      a.active {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
     }
 
     li:first-child {
-      margin-left: 0;
-    }
-
-    a {
-      text-decoration: none;
-      display: inline-block;
-    }
-
-    li:hover,
-    li.active {
-      background-color: rgba(0, 0, 0, 0.1);
+      a {
+        margin-left: 0;
+      }
     }
   }
 }
 
 .nav-bar {
   text-align: center;
-
-  @include bp-max($breakpoint--md) {
+  @include bp-max($breakpoint--md){
     //display: none;
   }
 }

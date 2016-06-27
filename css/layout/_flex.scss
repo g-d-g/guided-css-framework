@@ -1,0 +1,47 @@
+/**
+
+  @flex
+---------------------------------------------------------
+  layout/_flex.scss
+--------------------------------------------------------
+
+
+
+------------------------------------------------------ */
+.container-flex {
+  width: 100%;
+
+  // Defaults to flex display
+  display: flex;
+
+  // Defaults to wrapping overflow
+  flex-wrap: wrap;
+
+  // Defaults to row direction
+  flex-direction: row;
+
+  // Defaults to justifying content
+  justify-content: flex-start;
+
+  // Defaults to stretch flex content
+  align-items: stretch;
+  max-width: $breakpoint--xl;
+  margin: auto;
+}
+
+.col-1-flex,
+.col-2-flex,
+.col-3-flex,
+.col-4-flex,
+.col-5-flex,
+.col-6-flex,
+.col-7-flex,
+.col-8-flex,
+.col-9-flex,
+.col-10-flex,
+.col-11-flex {
+  flex: 0 1 auto;
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
